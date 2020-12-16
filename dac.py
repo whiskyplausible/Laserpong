@@ -216,6 +216,8 @@ def find_dac():
 		bp.dump()
 
 def find_first_dac():
+	return "192.168.101.100"
+	print "looking for dac..."
 	s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 	s.bind(("0.0.0.0", 7654))
 	data, addr = s.recvfrom(1024)
